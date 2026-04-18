@@ -1,34 +1,20 @@
-# Module 4 — Core Skills Drill: Descriptive Analytics
+# Core Skills Drill: Descriptive Analytics 📊
 
-Compute summary statistics, create distribution plots, and build a correlation heatmap from the provided sales dataset.
+هذا المشروع هو جزء من تدريب **AI.SPIRE**، ويهدف إلى إجراء تحليل إحصائي وصفي (Descriptive Analytics) لمجموعة بيانات مبيعات تجريبية باستخدام مكتبات **Pandas**, **Matplotlib**, و **Seaborn**.
 
-## Setup
+## 🛠️ المهام المنجزة (Tasks)
+تم تنفيذ العمليات التالية في سكربت `drill_eda.py`:
+1. **الإحصاء الوصفي (Summary Statistics):** حساب المتوسط، الوسيط، الانحراف المعياري، والقيم الدنيا والعليا.
+2. **توزيع البيانات (Data Distribution):** رسم Histograms مع KDE لكل من الكمية (`quantity`) وسعر الوحدة (`unit_price`).
+3. **تحليل الارتباط (Correlation Analysis):** إنشاء خريطة حرارية (Heatmap) لفهم العلاقة بين المتغيرات الرقمية.
 
+## 📁 مخرجات التحليل (Output Files)
+تجد جميع النتائج في مجلد `output/`:
+- `summary.csv`: يحتوي على الأرقام الإحصائية الأساسية.
+- `distributions.png`: يوضح شكل توزيع البيانات وتكرارها.
+- `correlation.png`: يوضح قوة العلاقة بين الأعمدة الرقمية.
+
+## 🚀 طريقة التشغيل
+لتشغيل التحليل وتحديث المخرجات، تأكد من تفعيل البيئة الافتراضية ثم شغل الأمر:
 ```bash
-pip install -r requirements.txt
-```
-
-## Tasks
-
-Complete `drill_eda.py` with three functions:
-
-1. `compute_summary(df)` — Summary statistics (count, mean, median, std, min, max) for numeric columns. Save to `output/summary.csv`.
-2. `plot_distributions(df, columns, output_path)` — 2x2 subplot figure with histograms + KDE overlay. Save to `output/distributions.png`.
-3. `plot_correlation(df, output_path)` — Annotated Pearson correlation heatmap. Save to `output/correlation.png`.
-
-See the drills page for full specifications.
-
-## Submit
-
-1. Create branch `drill-4-descriptive-analytics`
-2. Complete `drill_eda.py` so it generates all output files
-3. Push and open a PR to `main`
-4. Paste your PR URL into TalentLMS → Module 4 → Core Skills Drill
-
----
-
-## License
-
-This repository is provided for educational use only. See [LICENSE](LICENSE) for terms.
-
-You may clone and modify this repository for personal learning and practice, and reference code you wrote here in your professional portfolio. Redistribution outside this course is not permitted.
+python drill_eda.py
